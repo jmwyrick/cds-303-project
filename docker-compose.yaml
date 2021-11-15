@@ -1,0 +1,12 @@
+version: "1.0"
+services:
+  app-name:
+    build:
+      context: .
+    image: cds303-dashboard:1.0
+    container_name: cds303-dashboard
+    ports:
+      - "8050:8050"
+    environment:
+      - TARGET=$TARGET
+    restart: unless-stopped
