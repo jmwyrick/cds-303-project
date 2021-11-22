@@ -1,7 +1,7 @@
 # cds-303-project
 
 ## Setup
-Download Docker (Availible at [docker.io](https://www.docker.com/))
+Download Docker (Availible at [docker.io](https://www.docker.com/products/docker-desktop))
 
 
 ## Running the Container Without the Model 
