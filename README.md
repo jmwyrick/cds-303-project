@@ -2,7 +2,7 @@
 
 ## Setup
 Download Docker (Availible at [docker.io](https://www.docker.com/products/docker-desktop))
-Download the files containing the model and apps (Either git clone or click the download button and download as zip 
+Download the files containing the model and apps (Either git clone or click the code button and "Download as .zip")
 
 ## Running the Container Without the Model 
 The cds303-docker folder contains a containerized dash app without the actual model. To build and run the app use the following commands: 
