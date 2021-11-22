@@ -115,7 +115,9 @@ fig1 = px.bar(x=income_dict.keys(), y=income_dict.values())
 fig2 = px.bar(df, x=df["loan_intent"].head(5000), y=df["loan_amnt"].head(5000), color=df["loan_grade"].head(5000), barmode="group")
 fig3 = px.histogram(df, x=df["person_home_ownership"], barmode="group", color=df["loan_status"])
 fig4 = px.histogram(df, x=df["person_age"], barmode="group", color=df["loan_status"], nbins = 20)
-fig5 = px.scatter(x=df["person_income"].head(100), y=df["loan_amnt"].head(100), title="Income against loan amount")
+fig5 = px.scatter(x=df["person_income"].head(500), y=df["loan_amnt"].head(500), title="Income against loan amount")
+fig6 = px.histogram(df, x=df["loan_intent"], barmode="group", color=df["loan_status"])
+
 
 labels = ["RENT","OWN","MORTGAGE","OTHERS"]
 
@@ -196,6 +198,11 @@ fig5.update_layout(
     font_color=colors['text']
 )
 
+fig6.update_layout(
+    plot_bgcolor=colors['background'],
+    paper_bgcolor=colors['background'],
+    font_color=colors['text']
+)
 
 app.layout = html.Div([
     html.Div([
@@ -252,6 +259,12 @@ app.layout = html.Div([
         html.Div([
         html.H1("Income against loan amount"),
         dcc.Graph(id="income_vs_loan", figure=fig5)
+
+    ], className="float-child"),
+          
+        html.Div([
+        html.H1("Number of defaults versus loan intent"),
+        dcc.Graph(id="defaults_vs_intent", figure=fig6)
 
     ], className="float-child")
 
