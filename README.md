@@ -16,3 +16,10 @@ The docker-model folder contains our model with streamlit inside of a docker con
   docker build -t 303model .
   docker run -p 8501:8501 303model
  ```
+## Running the Container with the final model and outputs 
+The docker-model folder contains our model with streamlit inside of a docker container. To build and run the app with the model use the following commands:
+ ```
+  docker build -t 303model .
+  docker run -p 8501:8501 303model
+ ```
+ This container also includes files to run the app in kubernetes, however these are still WIP. 
